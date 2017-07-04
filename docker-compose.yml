@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mysql-shedlock:
+    build:
+      context: .
+      dockerfile: mysqlDockerFile
+    image: mysql-shedlock:1.0
+    container_name: mysql-shedlock
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
